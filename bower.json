@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "dependencies": {
+    "ng-jcrop": "*"
+  },
+  "overrides": {
+    "jcrop": {
+      "main": [
+        "js/jquery.Jcrop.js"
+      ]
+    },
+    "angular": {"main": []},
+    "angular-mocks": {"main": []},
+    "jquery": {"main": []}
+  }
+}
