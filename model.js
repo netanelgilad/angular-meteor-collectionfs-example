@@ -20,9 +20,12 @@ if (Meteor.isServer) {
             var image = Images.findOne(_id);
             var readStream = image.createReadStream('original');
             var writeStream = image.createWriteStream('thumbnail');
+
+            //The following line should be avoided
             writeStream.safeOn('stored', function() {
                 image.updatedAt(new Date(), {store: 'thumbnail'});
             });
+
             gm(readStream).crop(size.width, size.height, size.x, size.y).stream().pipe(writeStream);
         }
     });

@@ -1,23 +1,18 @@
-<div ng-controller="ExampleCtrl">
+<div>
     <a href="" ng-click="addImage()">Add image</a>
     <table>
         <thead>
         <tr>
             <th>Name</th>
             <th>Thumbnail</th>
-            <th>Original</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="image in images" ng-controller="ImageCtrl">
-            <td>{{image.original.name}}</td>
-            <td><img ng-src="{{obj.thumbnailUrl}}"></td>
-            <td><div ng-jcrop="obj.originalUrl" selection="obj.coords" thumbnail="true"></div></td>
+        <tr ng-repeat="image in images">
+            <td><a href="" ui-sref=".image({imageId: image._id})">{{image.original.name}}</a></td>
+            <td><img class="thumbnail" ng-src="{{url(image, 'thumbnail')}}"></td>
         </tr>
         </tbody>
     </table>
-    x: {{coords.x}}<br>
-    y: {{coords.y}}<br>
-    width: {{coords.width}}<br>
-    height: {{coords.height}}
+    <ui-view></ui-view>
 </div>
