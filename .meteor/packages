@@ -14,7 +14,7 @@ urigo:angular@=0.7.2
 angularui:angular-ui-router
 
 cfs:standard-packages
-cfs:gridfsdd
+cfs:gridfs
 cfs:graphicsmagick
 
 jonblum:jquery-cropper

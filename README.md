@@ -33,3 +33,13 @@ as I would have expected to be able to be, I fall in a digest loop throwing erro
 About these : https://github.com/epotvin/thumbnail-example/blob/master/client/example.js#L45-L49
 
 I think the fix of @netanelgilad is exactly what will solve it.
+
+## https://github.com/Urigo/angular-meteor/issues/234
+
+When meteor starts, Karma have a hard time with angular and cfs. In the console of the second window opened by karma, I have the following errors :
+
+Failed to load resource: the server responded with a status of 404 (Not Found)
+cfs_access-point.js?0bfe974ee453abef55cf9a71244e13121aabc0a3:284 failed [404] NOT FOUND
+http://localhost:9876/client/example.ng.html Failed to load resource: the server responded with a status of 404 (Not Found)
+http://localhost:9876/client/image.ng.html Failed to load resource: the server responded with a status of 404 (Not Found)
+
