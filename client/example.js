@@ -3,7 +3,10 @@ angular.module('example', ['angular-meteor', 'ui.router']);
 angular.module("example").config(['$urlRouterProvider', '$stateProvider', '$locationProvider',
     function ($urlRouterProvider, $stateProvider, $locationProvider) {
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
 
         $stateProvider
             .state('app', {
