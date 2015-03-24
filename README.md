@@ -18,4 +18,18 @@ The reason I want this to work is because I want the thumbnail to be updated rea
 This issue is more a feature request then a bug. It would be really cool to deal with a cfs collection like a normal collection.
 After I have finish with this I intend to try this example with the change @netanelgilad has tried. It seems to be the fix I need.
 
+About these lines :
 
+https://github.com/epotvin/thumbnail-example/blob/master/client/example.js#L33-L40
+
+If I replace them with a simple line like this :
+
+``javascript
+return image.url({store: store}) + '&updatedAt=' + image.copies[store].updatedAt.getTime();
+````
+
+as I would have expected to be able to be, I fall in a digest loop throwing errors.
+
+About these : https://github.com/epotvin/thumbnail-example/blob/master/client/example.js#L45-L49
+
+I think the fix of @netanelgilad is exactly what will solve it.
