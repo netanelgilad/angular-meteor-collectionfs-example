@@ -24,7 +24,7 @@ https://github.com/epotvin/thumbnail-example/blob/master/client/example.js#L33-L
 
 If I replace them with a simple line like this :
 
-``javascript
+```javascript
 return image.url({store: store}) + '&updatedAt=' + image.copies[store].updatedAt.getTime();
 ````
 
