@@ -11,8 +11,8 @@
         <tr ng-repeat="image in images">
             <td><a href="" ui-sref=".image({imageId: image._id})">{{image.original.name}}</a></td>
             <td><img class="thumbnail" ng-src="{{url(image, 'thumbnail')}}"></td>
+            <td><button ng-click="removeImage(image)">X</button></td>
         </tr>
         </tbody>
     </table>
-    <ui-view></ui-view>
 </div>
