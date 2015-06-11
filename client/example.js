@@ -6,8 +6,6 @@ angular.module('example').controller('ExampleCtrl', ['$meteor', '$scope', functi
 
     $scope.addImage = function () {
         $('<input type="file">').bind("change", function (event) {
-            // There is a bug in angular-meteor that causes this code not to
-            // work. Once it is solves should be possible with:
             $scope.images.save(event.target.files[0]);
         }).click();
     };
